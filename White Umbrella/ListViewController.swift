@@ -11,6 +11,10 @@ class ListViewController: UIViewController {
 
     let tableView = UITableView()
     
+    private lazy var addButtonItem: UIBarButtonItem = {
+        return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,17 +50,39 @@ class ListViewController: UIViewController {
 
 // MARK: - Setup UI Elements
 extension ListViewController {
+    
     private func setupUIElements() {
         setupNavController()
         setupTableView()
+        setupSearchBar()
+    }
+    
+    @objc private func addButtonTapped() {
+        print(#function)
     }
     
     
     private func setupNavController() {
-        navigationItem.title = "Города"
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        //navigationController?.navigationBar.barTintColor = .navControllerColor()
+        
+        let titleLabel = UILabel()
+        titleLabel.text = "WHITE UMBRELLA"
+        titleLabel.font = UIFont(name: "Avenir", size: 15)
+        titleLabel.textColor = .black
+        
+        addButtonItem.tintColor = .black
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
+        navigationItem.rightBarButtonItem = addButtonItem
 
+    }
+    
+    private func setupSearchBar() {
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        
     }
     
     private func setupTableView() {
@@ -67,7 +93,7 @@ extension ListViewController {
         tableView.rowHeight = 100
         tableView.separatorColor = .clear
         tableView.backgroundColor = .cellColor()
-        tableView.register(ListTableViewCell.self, forCellReuseIdentifier: K.cell_id)
+        tableView.register(ListViewCell.self, forCellReuseIdentifier: K.cell_id)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -86,11 +112,11 @@ extension ListViewController {
 // MARK: - Table view data source and delegate
 extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cell_id, for: indexPath) as! ListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cell_id, for: indexPath) as! ListViewCell
         
         cell.cityNameLabel.text = "Санкт-Петербург"
         
@@ -99,5 +125,13 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
+// MARK: - Search Bar Delegates
+extension ListViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
+
+}
 
 

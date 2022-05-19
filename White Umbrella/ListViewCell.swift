@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListTableViewCell: UITableViewCell {
+class ListViewCell: UITableViewCell {
 
     lazy var cellView: UIView = {
         let view = UIView()
@@ -84,7 +84,7 @@ class ListTableViewCell: UITableViewCell {
 
 }
 
-extension ListTableViewCell {
+extension ListViewCell {
     
     private func setupUIElements() {
         

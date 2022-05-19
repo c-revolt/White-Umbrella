@@ -12,7 +12,7 @@
 		D0FAF4BA28352000001556A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FAF4B928352000001556A8 /* Assets.xcassets */; };
 		D0FAF4BD28352000001556A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FAF4BB28352000001556A8 /* LaunchScreen.storyboard */; };
 		D0FAF4C52835224B001556A8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FAF4C42835224B001556A8 /* ListViewController.swift */; };
-		D0FAF4C728352290001556A8 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FAF4C628352290001556A8 /* ListTableViewCell.swift */; };
+		D0FAF4C728352290001556A8 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FAF4C628352290001556A8 /* ListViewCell.swift */; };
 		D0FAF4C928352E96001556A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FAF4C828352E96001556A8 /* Constants.swift */; };
 		D0FAF4CB28352F88001556A8 /* UIColor Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FAF4CA28352F88001556A8 /* UIColor Extention.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +25,7 @@
 		D0FAF4BC28352000001556A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0FAF4BE28352000001556A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0FAF4C42835224B001556A8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		D0FAF4C628352290001556A8 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		D0FAF4C628352290001556A8 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		D0FAF4C828352E96001556A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0FAF4CA28352F88001556A8 /* UIColor Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +63,7 @@
 				D0FAF4B028351FFC001556A8 /* AppDelegate.swift */,
 				D0FAF4B228351FFC001556A8 /* SceneDelegate.swift */,
 				D0FAF4C42835224B001556A8 /* ListViewController.swift */,
-				D0FAF4C628352290001556A8 /* ListTableViewCell.swift */,
+				D0FAF4C628352290001556A8 /* ListViewCell.swift */,
 				D0FAF4CA28352F88001556A8 /* UIColor Extention.swift */,
 				D0FAF4C828352E96001556A8 /* Constants.swift */,
 				D0FAF4B928352000001556A8 /* Assets.xcassets */,
@@ -145,7 +145,7 @@
 			files = (
 				D0FAF4C928352E96001556A8 /* Constants.swift in Sources */,
 				D0FAF4C52835224B001556A8 /* ListViewController.swift in Sources */,
-				D0FAF4C728352290001556A8 /* ListTableViewCell.swift in Sources */,
+				D0FAF4C728352290001556A8 /* ListViewCell.swift in Sources */,
 				D0FAF4B128351FFC001556A8 /* AppDelegate.swift in Sources */,
 				D0FAF4B328351FFC001556A8 /* SceneDelegate.swift in Sources */,
 				D0FAF4CB28352F88001556A8 /* UIColor Extention.swift in Sources */,
