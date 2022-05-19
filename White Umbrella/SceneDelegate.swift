@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
 
-        let controller = ListTableViewController()
+        let controller = ListViewController()
         let navigationController = UINavigationController(rootViewController: controller)
         window?.rootViewController = navigationController
     }
